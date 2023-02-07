@@ -229,6 +229,7 @@ h6{ font-size: 16px;}
 }
 
 #preview{
+    box-sizing: border-box;
     width: 300px;
 	border:1.5px solid #17a2b8;
 	background-color: var(--previewBg);
@@ -236,7 +237,278 @@ h6{ font-size: 16px;}
 	position: relative;
 
 }
+
+/* ANIMATED TEXT */
+
+.animated-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .animated-container h1 {
+    color: #333;
+    font-family: tahoma;
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 550px;
+  }
+  
+  h1 span {
+    font-size: 40px;
+    margin-left: 40px;
+  }
+  
+  .message {
+    background-color: yellow;
+    color: #333;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    position: absolute;
+    padding-left: 0.5rem;
+    top: 0.2rem;
+    left: 270px;
+    animation: openclose 5s ease-in-out infinite;
+  }
+  
+  .word1, .word2, .word3 {
+    font-family: tahoma;
+  }
+  
+  @keyframes openclose {
+    0% {
+      top: 0.2rem;
+      width: 0;
+    }
+    5% {
+      width: 0;
+    }
+    15% {
+      width: 230px;
+    }
+    30% {
+      top: 0.2rem;
+      width: 230px;
+    }
+    33% {
+      top: 0.2rem;
+      width: 0;
+    }
+    35% {
+      top: 0.2rem;
+      width: 0;
+    }
+    38% {
+      top: -4.5rem;
+      
+    }
+    48% {
+      top: -4.5rem;
+      width: 190px;
+    }
+    62% {
+      top: -4.5rem;
+      width: 190px;
+    }
+    66% {
+      top: -4.5rem;
+      width: 0;
+      text-indent: 0;
+    }
+    71% {
+      top: -9rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    86% {
+      top: -9rem;
+      width: 285px;
+    }
+    95% {
+      top: -9rem;
+      width: 285px;
+    }
+    98% {
+      top: -9rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
+
+/* END ANIMATED TEXT */
+
 /* END PERSONALIZE THEMES AND INTRODUCTION */
+
+/* TABS CONTAINER */
+.main-container.s2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 40px 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tab {
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s ease-in-out;
+}
+
+.tab:hover {
+    border-bottom: 2px solid black;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.tab-content-item {
+    display: none;
+    padding: 20px;
+    font-size: 18px;
+}
+
+#tab-1-content {
+    display: block;
+}
+/* END TABS CONTAINER */
+
+/* SKILLS TAB */
+
+.technical-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.skill img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+@media (max-width: 767px) {
+.skill {
+    margin: 10px;
+}
+}
+
+.skill-logo {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-logo:hover {
+    transform: scale(1.1) translateZ(1px);
+}
+/*END SKILLS TAB  */
+  
+
+/* HOBBIES TAB */
+    .hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hobby-card {
+    position: relative;
+    width: 30%;
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.hobby-card:hover img {
+    filter: blur(2px);
+}
+
+.hobby-text {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hobby-card:hover .hobby-text {
+    left: 0;
+}
+
+.hobby-text h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.hobby-text p {
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+/* END HOBBIES TAB */
 
 /* ABOUT SECTION */
 .about-wrapper{
@@ -247,15 +519,9 @@ h6{ font-size: 16px;}
 	gap:100px;
 }
 
-#skills{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: var(--previewShadow);
-}
-
 .post-wrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 320px);
+    grid-template-columns: repeat(auto-fit, 520px);
     gap: 20px;
     justify-content: center;
     padding-bottom: 50px;
@@ -264,7 +530,7 @@ h6{ font-size: 16px;}
 .thumbnail{
     display: block;
     width: 100%;
-    height: 180px;
+    height: 360px;
     object-fit: cover;
 }
 
@@ -290,6 +556,60 @@ h6{ font-size: 16px;}
 	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 }
+
+/* OTHER PROJECTS */
+
+.other-porjects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .card:hover img {
+    transform: scale(1.2) blur(2px);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h2,
+  .overlay p {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* END OTHER */
 
 #contact-form{
 	display: block;
