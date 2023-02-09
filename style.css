@@ -385,26 +385,26 @@ h6{ font-size: 16px;}
     align-items: center;
   }
   
-  .hobby-card {
+.hobby-card {
     position: relative;
     width: calc(33.33% - 40px); /* adjust the width and margin here to control the responsiveness */
     height: 300px;
     margin: 20px;
     overflow: hidden;
-  }
-  
-  .hobby-card img {
+}
+
+.hobby-card img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* add object-fit to keep the aspect ratio of the image */
     transition: all 0.5s ease-in-out;
-  }
-  
-  .hobby-card:hover img {
+}
+
+.hobby-card:hover img {
     filter: blur(2px);
-  }
-  
-  .hobby-text {
+}
+
+.hobby-text {
     position: absolute;
     top: 0;
     left: 100%;
@@ -418,66 +418,75 @@ h6{ font-size: 16px;}
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .hobby-card:hover .hobby-text {
+}
+
+.hobby-card:hover .hobby-text {
     left: 0;
-  }
-  
-  .hobby-text h3 {
+}
+
+.hobby-text h3 {
     margin: 0;
     text-align: center;
-  }
+}
   
-  .hobby-text p {
+.hobby-text p {
     margin: 20px 0 0 0;
     text-align: center;
-  }
+}
 
-  @media only screen and (max-width: 767px) {
-    .hobby-card {
-      width: calc(100% - 40px); 
-    }
-  }
+@media screen and (max-width: 767px) {
+.hobbies-container {
+flex-direction: column;
+}
+
+.hobby-card {
+width: 100%;
+margin: 20px 0;
+}
+}
+
+@media screen and (max-width: 500px) {
+.hobby-card {
+height: 200px;
+}
+}
 /* END HOBBIES TAB */
 
-.post-wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 520px));
-    gap: 20px;
-    justify-content: center;
-    padding-bottom: 50px;
-    }
+.post-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 50px;
+}
 
-.thumbnail{
-    display: block;
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    }
+.thumbnail {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
 
-.post-preview{
-    background-color: #fff;
-    padding: 50px;
+.post-preview {
+  background-color: #fff;
+  padding: 50px;
+  width: 100%;
 }
 
 .preview-btn {
-    font-size: 16px;
-    font-weight: 200;
-    letter-spacing: 1px;
-    padding: 13px 20px 13px;
-    outline: 0;
-    border: 1px solid black;
-    cursor: pointer;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.preview-btn a{
-    color: var(--secondaryText);
+.preview-btn a {
+  color: var(--secondaryText);
 }
 
 @media (min-width: 768px) {
@@ -486,22 +495,20 @@ h6{ font-size: 16px;}
   }
 }
 
-.post-title{
-    color: #121212;
-    margin: 0;
+.post-title {
+  color: #121212;
+  margin: 0;
 }
 
-.post-intro{
-    color: #121212;
-    font-size: 16px;
+.post-intro {
+  color: #121212;
+  font-size: 16px;
 }
 
-.post{
-    border: 1px solid var(--borderColor);
-
-    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+.post {
+  border: 1px solid var(--borderColor);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  width: 100%;
 }
 
 /* OTHER PROJECTS */
