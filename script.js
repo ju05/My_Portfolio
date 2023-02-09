@@ -20,7 +20,7 @@ for (var i=0; themeDots.length > i; i++){
 function setTheme(mode){
     if(mode == 'light'){
         document.getElementById('theme-style').href = 'style.css',
-        document.getElementById('muggle-greeting').innerHTML = '<div id = "muggle-greeting" class="greeting-wrapper"><h1 id="hello">Hello there,  I am Juliana Schmidt!</h1></div>'
+        document.getElementById('muggle-greeting').innerHTML = '<div id = "muggle-greeting" class="greeting-wrapper"><h1 id="hello">Hello there, <br>I am Juliana Schmidt!</h1></div>'
         document.getElementById('profile-pic').src = 'images/j.amaralwork@gmail.com.jpg',
         document.getElementById('linkedin-icon').style.color = '#FF605C',
         document.getElementById('github-icon').style.color = '#FFBD44',
@@ -29,7 +29,7 @@ function setTheme(mode){
 
     if(mode == 'blue'){
         document.getElementById('theme-style').href = 'blue.css',
-        document.getElementById('muggle-greeting').innerHTML = '<div id = "muggle-greeting" class="greeting-wrapper"><h1 id="hello">Hello there,  I am Juliana Schmidt!</h1></div>'
+        document.getElementById('muggle-greeting').innerHTML = '<div id = "muggle-greeting" class="greeting-wrapper"><h1 id="hello">Hello there, <br>I am Juliana Schmidt!</h1></div>'
         document.getElementById('profile-pic').src = 'images/profile-j.amaralwork@gmail.com.jpeg',
         document.getElementById('linkedin-icon').style.color = '#f3098e87',
         document.getElementById('github-icon').style.color = '#f3098e87',
