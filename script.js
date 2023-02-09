@@ -19,19 +19,101 @@ for (var i=0; themeDots.length > i; i++){
 
 function setTheme(mode){
     if(mode == 'light'){
-        document.getElementById('theme-style').href = 'style.css'
+        document.getElementById('theme-style').href = 'style.css',
+        document.getElementById('muggle-greeting').innerHTML = '<div id = "muggle-greeting" class="greeting-wrapper"><h1 id="hello">Hello there, I am Juliana Schmidt!</h1></div>'
+        document.getElementById('profile-pic').src = 'images/j.amaralwork@gmail.com.jpg',
+        document.getElementById('linkedin-icon').style.color = '#FF605C',
+        document.getElementById('github-icon').style.color = '#FFBD44',
+        document.getElementById('email-icon').style.color = '#00CA4E'        
     }
 
     if(mode == 'blue'){
-        document.getElementById('theme-style').href = 'blue.css'
+        document.getElementById('theme-style').href = 'blue.css',
+        document.getElementById('muggle-greeting').innerHTML = '<div id = "muggle-greeting" class="greeting-wrapper"><h1 id="hello">Hello there, I am Juliana Schmidt!</h1></div>'
+        document.getElementById('profile-pic').src = 'images/profile-j.amaralwork@gmail.com.jpeg',
+        document.getElementById('linkedin-icon').style.color = '#f3098e87',
+        document.getElementById('github-icon').style.color = '#f3098e87',
+        document.getElementById('email-icon').style.color = '#f3098e87'
     }
 
-    if(mode == 'purple'){
-        document.getElementById('theme-style').href = 'purple.css'
+    if(mode == 'harry'){
+        document.getElementById('theme-style').href = 'harry.css',
+        document.getElementById('muggle-greeting').innerHTML = '<img src="images/hello-hp.png" style=" width: 100%; justify-content: center;" alt="hello there, I am Juliana Schmidt in Harry Potters font">',
+        document.getElementById('profile-pic').src = "images/j.amaralwork@gmail_hp.jpg",
+        document.getElementById('linkedin-icon').style.color = '#d3a425b6',
+        document.getElementById('github-icon').style.color = '#d3a425b6',
+        document.getElementById('email-icon').style.color = '#d3a425b6'
     }
     localStorage.setItem('theme', mode)
 
 }
+
+// animated text
+let textArray = ["Full Stack Developer", "Python Developer", "Data Science fascinated", "Enthusiastic team player", "Gryffindor's Wizard"];
+let textIndex = 0;
+
+let whatIDo = document.getElementById("what-i-do");
+
+setInterval(function() {
+  whatIDo.innerHTML = textArray[textIndex];
+  textIndex = (textIndex + 1) % textArray.length;
+}, 2000);
+
+// draggable div
+let isDragging = false;
+let currentX;
+let currentY;
+let initialX;
+let initialY;
+let xOffset = 0;
+let yOffset = 0;
+
+const preview = document.getElementById("preview");
+const previewShadow = document.getElementById("preview-shadow");
+
+preview.addEventListener("mousedown", dragStart);
+preview.addEventListener("mouseup", dragEnd);
+preview.addEventListener("mouseout", dragEnd);
+preview.addEventListener("mousemove", drag);
+
+function dragStart(e) {
+  initialX = e.clientX - xOffset;
+  initialY = e.clientY - yOffset;
+
+  if (e.target === preview) {
+    isDragging = true;
+  }
+}
+
+function dragEnd(e) {
+  initialX = currentX;
+  initialY = currentY;
+
+  isDragging = false;
+}
+
+function drag(e) {
+  if (isDragging) {
+    e.preventDefault();
+    currentX = e.clientX - initialX;
+    currentY = e.clientY - initialY;
+
+    xOffset = currentX;
+    yOffset = currentY;
+
+    setTranslate(currentX, currentY, preview);
+  }
+}
+
+function setTranslate(xPos, yPos, el) {
+  el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+}
+
+window.addEventListener("beforeunload", function() {
+  preview.style.transform = "translate3d(0, 0, 0)";
+  xOffset = 0;
+  yOffset = 0;
+});
 
 // cards animation in 'more projects'
 let cards = document.querySelectorAll('.card');
@@ -64,93 +146,6 @@ tabs.forEach(tab => {
   });
 });
 
-// text animation
-const elts = {
-    text1: document.getElementById("text1"),
-    text2: document.getElementById("text2")
-};
-
-const texts = [
-    "Full Stack",
-    "Python",
-    "Data Fascinated",
-    "Back-end",
-    "Front-end",
-    "Yogui",
-    "Potterhead",
-    "Motiveted",
-];
-
-const morphTime = 1;
-const cooldownTime = 0.25;
-
-let textIndex = texts.length - 1;
-let time = new Date();
-let morph = 0;
-let cooldown = cooldownTime;
-
-elts.text1.textContent = texts[textIndex % texts.length];
-elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-
-function doMorph() {
-    morph -= cooldown;
-    cooldown = 0;
-
-    let fraction = morph / morphTime;
-
-    if (fraction > 1) {
-        cooldown = cooldownTime;
-        fraction = 1;
-    }
-
-    setMorph(fraction);
-}
-
-function setMorph(fraction) {
-    elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-    elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-
-    fraction = 1 - fraction;
-    elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-    elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-
-    elts.text1.textContent = texts[textIndex % texts.length];
-    elts.text2.textContent = texts[(textIndex + 1) % texts.length];
-}
-
-function doCooldown() {
-    morph = 0;
-
-    elts.text2.style.filter = "";
-    elts.text2.style.opacity = "100%";
-
-    elts.text1.style.filter = "";
-    elts.text1.style.opacity = "0%";
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-
-    let newTime = new Date();
-    let shouldIncrementIndex = cooldown > 0;
-    let dt = (newTime - time) / 1000;
-    time = newTime;
-
-    cooldown -= dt;
-
-    if (cooldown <= 0) {
-        if (shouldIncrementIndex) {
-            textIndex++;
-        }
-
-        doMorph();
-    } else {
-        doCooldown();
-    }
-}
-
-animate();
-
 // contact form
 function sendEmail(){
     visitorEmail = document.getElementById("email").value
@@ -164,6 +159,6 @@ function sendEmail(){
         Subject : "New message from your portfolio",
         Body : visitorEmail + "<br>" + visitorMessage + "<br>" + visitorMessage
     }).then(
-    message => alert(message)
+    message => alert("Your message was sent. I'll be in touch soon. Thank you! ")
     );
     }

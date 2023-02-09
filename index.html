@@ -7,12 +7,7 @@
     <script src="https://kit.fontawesome.com/ac26c51492.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Open+Sans:wght@300&family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link id="theme-style" rel="stylesheet" href="">
     <title>Juliana Schmidt Portfolio</title>
@@ -20,8 +15,8 @@
 <body>
     <section class="s1">
         <div class="main-container">
-            <div class="greeting-wrapper">
-                <h1>Hello there, I'm Juliana Schmidt</h1>
+            <div id = "muggle-greeting" class="greeting-wrapper">
+                <h1 id="hello">Hello there, I'm Juliana Schmidt!</h1>
             </div>
             
             <div class="intro-wrapper">
@@ -33,7 +28,7 @@
                     </div>
 
                     <ul id="navigation">
-                        <li><a href="#">contact</a></li>
+                        <li><a class="contact-short" href="#contact-form">contact</a></li>
                     </ul>
                 </div>
 
@@ -44,7 +39,7 @@
                     <div class="theme-options-wrapper">
                         <div data-mode="light" id= "light-mode" class="theme-dot"></div>
                         <div data-mode="blue" id= "blue-mode" class="theme-dot"></div>
-                        <div data-mode="purple" id= "purple-mode" class="theme-dot"></div>
+                        <div data-mode="harry" id= "harry-mode" class="theme-dot"></div>
                     </div>
 
                     <p id="settings-note">Theme options will be saved for <br> your next visit
@@ -56,7 +51,7 @@
                     <div id="preview-shadow">
                         <div id="preview">
                             <h3>What I do </h3>
-                            <p>I am a Full Stack Developer</p>
+                            <p>I'm a... <br> <span id="what-i-do" style="font-family: 'Orbitron', sans-serif; font-size: 2rem;">Full Stack Developer</span> </p>
                         </div>
                     </div>
                 </div>
@@ -72,7 +67,7 @@
                     <div class="tabs">
                         <div class="tab" id="tab-1">About Me</div>
                         <div class="tab" id="tab-2">Technical Skills</div>
-                        <div class="tab" id="tab-3">Hobbies</div>
+                        <div class="tab" id="tab-3">Hobbies & Habits</div>
                     </div>
                     <div class="tab-content">
                         <div class="tab-content-item" id="tab-1-content">
@@ -101,33 +96,38 @@
                                   </li>
 
                                   <li class="skill">
+                                    <img class="skill-logo" src="images/django_icon.png" alt="Logo 1">
+                                    <p>Django</p>
+                                  </li>
+
+                                  <li class="skill">
+                                    <img class="skill-logo" src="images/sql_icon.png" alt="Logo 3">
+                                    <p>SQL</p>
+                                  </li>
+
+                                  <li class="skill">
+                                    <img class="skill-logo" src="images/postresql_icon.png" alt="Logo 3">
+                                    <p>Postgres</p>
+                                  </li>
+
+                                  <li class="skill">
+                                    <img class="skill-logo" src="images/Git-Icon.png" alt="Logo 3">
+                                    <p>GIT</p>
+                                  </li>                                  
+
+                                  <li class="skill">
                                     <img class="skill-logo" src="images/js_icon.jpg" alt="Logo 2">
                                     <p>JavaScript</p>
                                   </li>
 
                                   <li class="skill">
-                                    <img class="skill-logo" src="images/sql_icon.png" alt="Logo 3">
-                                    <p>SQL</p>
+                                    <img class="skill-logo" src="images/css_icon.png" alt="Logo 3">
+                                    <p>CSS3</p>
                                   </li>
 
                                   <li class="skill">
-                                    <img class="skill-logo" src="images/sql_icon.png" alt="Logo 3">
-                                    <p>SQL</p>
-                                  </li>
-
-                                  <li class="skill">
-                                    <img class="skill-logo" src="images/sql_icon.png" alt="Logo 3">
-                                    <p>SQL</p>
-                                  </li>
-
-                                  <li class="skill">
-                                    <img class="skill-logo" src="images/sql_icon.png" alt="Logo 3">
-                                    <p>SQL</p>
-                                  </li>
-
-                                  <li class="skill">
-                                    <img class="skill-logo" src="images/sql_icon.png" alt="Logo 3">
-                                    <p>SQL</p>
+                                    <img class="skill-logo" src="images/html_icon.png" alt="Logo 3">
+                                    <p>HTML5</p>
                                   </li>
 
                                 </ul>
@@ -136,21 +136,34 @@
                         </div>
 
                         <div class="tab-content-item" id="tab-3-content">
+                            <h4>Hobbies & Habits</h4>
                             <div class="hobbies-container">
 
-                                <div class="hobbies-card">
-                                  <img src="images/css_icon.png" alt="Hobby 1">
-                                  <div class="hobbies-card-text">
-                                    <h3>Hobby 1</h3>
-                                    <p>Description of Hobby 1</p>
+                                <div class="hobby-card">
+                                  <img src="images/j.amaralwork@gmail.com_yoga.jpg" alt="Yoga">
+                                  <div class="hobby-text">
+                                    <h3>Yoga</h3>
+                                    <p>"It's not about being good at something. <br>
+                                        Is about being good to yourself" <br>
+                                        - Unknown - </p>
                                   </div>
                                 </div>
 
-                                <div class="hobbies-card">
-                                  <img src="images/css_icon.png" alt="Hobby 2">
-                                  <div class="hobbies-card-text">
-                                    <h3>Hobby 2</h3>
-                                    <p>Description of Hobby 2</p>
+                                <div class="hobby-card">
+                                    <img src="images/aquarela2.jpg" alt="Yoga">
+                                    <div class="hobby-text">
+                                      <h3>Reading</h3>
+                                      <p>"Our passion for learning is our tool for survival" <br>
+                                          - Carl Sagan -</p>
+                                    </div>
+                                  </div>
+
+                                <div class="hobby-card">
+                                  <img src="images/Aquarela1.jpg" alt="watercolor">
+                                  <div class="hobby-text">
+                                    <h3>Watercolor</h3>
+                                    <p>"Great things are done by a series of small things <br>
+                                        brought together." <br> - Van Gogh - </p>
                                   </div>
                                 </div>
 
@@ -171,22 +184,24 @@
 
                 <div>
                     <div class="post">
-                        <img class="thumbnail" src="images/django_icon.png" alt="">
+                        <img class="thumbnail" src="images/recipapp.jpg" alt="">
                         <div class="post-preview">
-                            <h6 class="post-title">Post Title</h6>
-                            <p class="post-intro">This is a sentence. Some more text</p>
-                            <a href="#">more...</a>
+                            <h6 class="post-title">Recipes Searcher and Planner</h6>
+                            <p class="post-intro">A meal planner and searcher with special login for either regular users or chefs/restaurants, made using Google OAuth 2.0 authentication through Django allauth. The users can search for recipes and add them to their calendar using the Google Calendar API.</p></p>
+                            <button class="preview-btn"><a href="https://www.loom.com/share/52b945b979174f31b6d26287cd38da52" target="_blank" style="color:black">Demo</a></button>
+                            <button class="preview-btn"><a href="https://github.com/ju05/FinalProject" target="_blank" style="color:black">Code</a></button>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="post">
-                        <img class="thumbnail" src="images/django_icon.png" alt="">
+                        <img class="thumbnail" src="images/hoteltorquay.jpg" alt="">
                         <div class="post-preview">
-                            <h6 class="post-title">Post Title</h6>
-                            <p class="post-intro">This is a sentence. Some more text</p>
-                            <a href="#">more...</a>
+                            <h6 class="post-title">Hotel Management</h6>
+                            <p class="post-intro">A website with two interfaces, one for visitors and another for staff. The visitor interface allows login, contact with the hotel, checking availability, and making a booking. The project was made using Django and PostgreSQL, allowing for staff management. Staff can make reservations for users, delete and edit bookings, and also add new rooms.</p>
+                            <button class="preview-btn"><a href="https://www.loom.com/share/ff4642f015154c37b784da1511e2580f" target="_blank" style="color:black">Demo</a></button>
+                            <button class="preview-btn"><a href="https://github.com/ju05/Hotel_Torquay" target="_blank" style="color:black">Code</a></button>
                         </div>
                     </div>
                 </div> 
@@ -195,30 +210,31 @@
     </section>
 
     <section class="s4">
-        <h3 style="text-align: center;">Other projects</h3>
+        <h3 style="text-align: center;">Other Projects</h3>
         <div class="other-porjects-container">
             
             <div class="card">
               <img src="images/covid_analysis.jpg" alt="Image 1">
               <div class="overlay">
-                <h2>Title 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="https://github.com/ju05/DI-Bootcamp/blob/main/Week7/Hackathon/covid-19_deaths_overview.ipynb" target="_blank">
+                <h2>Data: COVID-19 Analysis</h2></a>                                    
               </div>
             </div>
 
             <div class="card">
-              <img src="images/covid_analysis.jpg" alt="Image 2">
+              <img src="images/data-neighbors.png" alt="Image 2">
               <div class="overlay">
-                <h2>Title 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="https://github.com/ju05/DI-Bootcamp/blob/main/data_exercises/data_exercise1.ipynb" target="_blank">
+              <h2>Data: Real Estate <br> Preparation for Prediction</h2></a>
+              
               </div>
             </div>
 
             <div class="card">
-                <img src="images/covid_analysis.jpg" alt="Image 2">
-                <div class="overlay">
-                  <h2>Title 2</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <img src="images/hackathon project.jpg" alt="Image 2">
+                <div class="overlay">                
+                <a href="https://github.com/ju05/DI-Bootcamp/tree/main/Week3/Hackathon" target="_blank">
+                <h2>Hackathon Project: JavaScript</h2> </a>
                 </div>
               </div>
 
@@ -254,15 +270,15 @@
             <div class="social-wrapper">
                 
                 <div class="logo">                        
-                    <a href="https://www.linkedin.com/in/juliana-schmidt-do-amaral-4832a168/?locale=en_US" target="_blank" aria-placeholder="Linkedin" style="color: #232946"><i class="fa-brands fa-linkedin fa-2x"></i></a>                       
+                    <a href="https://www.linkedin.com/in/juliana-schmidt-do-amaral-4832a168/?locale=en_US" target="_blank" aria-placeholder="Linkedin"><i class="fa-brands fa-linkedin fa-2x" id="linkedin-icon"></i></a>                       
                 </div>
 
                 <div class="logo">                        
-                    <a href="https://github.com/ju05" target="_blank" aria-placeholder="GitHub" style="color: #232946"><i class="fa-brands fa-github fa-2x"></i></a>                       
+                    <a href="https://github.com/ju05" target="_blank" aria-placeholder="GitHub"><i class="fa-brands fa-github fa-2x" id="github-icon"></i></a>                       
                 </div>
 
                 <div class="logo">                        
-                    <a href="https://www.linkedin.com/in/juliana-schmidt-do-amaral-4832a168/?locale=en_US" target="_blank" aria-placeholder="Linkedin" style="color: #232946"><i class="fa-solid fa-at fa-2x"></i></a>                       
+                    <a href="mailto:j.amaralwork@gmail.com?subject=Subject&body=Body" id="mailto" target="_blank" aria-placeholder="Linkedin"><i class="fa-solid fa-at fa-2x" id="email-icon"></i></a>                       
                 </div>
 
             </div>

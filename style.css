@@ -12,8 +12,8 @@
 	--previewBg:rgba(251, 249, 243, 0.618);
 	--previewShadow:#E1DFE1;
 
-
 	--buttonColor:black;
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -28,13 +28,13 @@ body *{
 
 h1,h2,h3,h4,h5,h6, strong{
     color: var(--mainText);
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
     
 }
 
 p, li, span, label, input, textarea{
     color: var(--mainText);
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 a{
     text-decoration: none;
@@ -65,12 +65,30 @@ h6{ font-size: 16px;}
     overflow: auto;
 }
 
+.s3{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s4{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s5{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
 .main-container{
     width: 1200px;
     margin: 0 auto;
 }
 
-.greeting-wrapper{
+.greeting-wrapper, .hello-hp{
     display: grid;
     text-align: center;
     align-content: center;
@@ -201,8 +219,8 @@ h6{ font-size: 16px;}
 	background-color: #121212;
 }
 
-#purple-mode{
-	background-color: #7E4C74;
+#harry-mode{
+	background-color: #740001;
 }
 
 #settings-note{
@@ -215,141 +233,46 @@ h6{ font-size: 16px;}
     grid-area: right-column;
     display: grid;
     align-content: center;
-
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 #preview-shadow{
-	background-color: var(--previewShadow);
-	max-width: 300px;
-	height: 130px;
-	padding-left: 30px;
-	padding-top: 30px;
-}
-
-#preview{
+    background-color: var(--previewShadow);
+    max-width: 275px;
+    height: 209px;
+    padding-left: 30px;
+    padding-top: 30px;
+    }
+    
+    #preview{
     box-sizing: border-box;
     width: 300px;
-	border:1.5px solid #17a2b8;
-	background-color: var(--previewBg);
-	padding:15px;
-	position: relative;
-
-}
-
-/* ANIMATED TEXT */
-
-.animated-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-  }
-  .animated-container h1 {
-    color: #333;
-    font-family: tahoma;
-    font-size: 3rem;
-    font-weight: 100;
-    line-height: 1.5;
-    text-transform: uppercase;
-    white-space: nowrap;
-    overflow: hidden;
+    border:1.5px solid #17a2b8;
+    background-color: var(--previewBg);
+    padding:15px;
     position: relative;
-    width: 550px;
-  }
-  
-  h1 span {
-    font-size: 40px;
-    margin-left: 40px;
-  }
-  
-  .message {
-    background-color: yellow;
-    color: #333;
-    display: block;
-    font-weight: 900;
-    overflow: hidden;
-    position: absolute;
-    padding-left: 0.5rem;
-    top: 0.2rem;
-    left: 270px;
-    animation: openclose 5s ease-in-out infinite;
-  }
-  
-  .word1, .word2, .word3 {
-    font-family: tahoma;
-  }
-  
-  @keyframes openclose {
-    0% {
-      top: 0.2rem;
-      width: 0;
+    cursor: grab;
     }
-    5% {
-      width: 0;
+    
+    #preview:hover{
+    cursor: grab;
     }
-    15% {
-      width: 230px;
+    
+    #preview.dragging{
+    cursor: grabbing;
     }
-    30% {
-      top: 0.2rem;
-      width: 230px;
-    }
-    33% {
-      top: 0.2rem;
-      width: 0;
-    }
-    35% {
-      top: 0.2rem;
-      width: 0;
-    }
-    38% {
-      top: -4.5rem;
-      
-    }
-    48% {
-      top: -4.5rem;
-      width: 190px;
-    }
-    62% {
-      top: -4.5rem;
-      width: 190px;
-    }
-    66% {
-      top: -4.5rem;
-      width: 0;
-      text-indent: 0;
-    }
-    71% {
-      top: -9rem;
-      width: 0;
-      text-indent: 5px;
-    }
-    86% {
-      top: -9rem;
-      width: 285px;
-    }
-    95% {
-      top: -9rem;
-      width: 285px;
-    }
-    98% {
-      top: -9rem;
-      width: 0;
-      text-indent: 5px;
-    }
-    100% {
-      top: 0;
-      width: 0;
-      text-indent: 0;
-    }
-  }
-
-/* END ANIMATED TEXT */
 
 /* END PERSONALIZE THEMES AND INTRODUCTION */
+
+/* ABOUT SECTION */
+.about-wrapper{
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	padding-bottom: 50px;
+	padding-top: 50px;
+	gap:100px;
+}
 
 /* TABS CONTAINER */
 .main-container.s2 {
@@ -375,6 +298,7 @@ h6{ font-size: 16px;}
 }
 
 .tab {
+    color: var(--mainText);
     padding: 20px;
     font-size: 20px;
     cursor: pointer;
@@ -454,38 +378,39 @@ h6{ font-size: 16px;}
   
 
 /* HOBBIES TAB */
-    .hobbies-container {
+.hobbies-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.hobby-card {
+  }
+  
+  .hobby-card {
     position: relative;
-    width: 30%;
+    width: calc(33.33% - 40px); /* adjust the width and margin here to control the responsiveness */
     height: 300px;
     margin: 20px;
     overflow: hidden;
-}
-
-.hobby-card img {
+  }
+  
+  .hobby-card img {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* add object-fit to keep the aspect ratio of the image */
     transition: all 0.5s ease-in-out;
-}
-
-.hobby-card:hover img {
+  }
+  
+  .hobby-card:hover img {
     filter: blur(2px);
-}
-
-.hobby-text {
+  }
+  
+  .hobby-text {
     position: absolute;
     top: 0;
     left: 100%;
     width: 100%;
     height: 100%;
-    background-color: yellow;
+    background-color: var(--mainColor);
     padding: 20px;
     box-sizing: border-box;
     transition: all 0.5s ease-in-out;
@@ -493,31 +418,22 @@ h6{ font-size: 16px;}
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.hobby-card:hover .hobby-text {
+  }
+  
+  .hobby-card:hover .hobby-text {
     left: 0;
-}
-
-.hobby-text h3 {
+  }
+  
+  .hobby-text h3 {
     margin: 0;
     text-align: center;
-}
-
-.hobby-text p {
+  }
+  
+  .hobby-text p {
     margin: 20px 0 0 0;
     text-align: center;
-}
+  }
 /* END HOBBIES TAB */
-
-/* ABOUT SECTION */
-.about-wrapper{
-    display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	padding-bottom: 50px;
-	padding-top: 50px;
-	gap:100px;
-}
 
 .post-wrapper{
     display: grid;
@@ -539,13 +455,38 @@ h6{ font-size: 16px;}
     padding: 50px;
 }
 
+.preview-btn {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.preview-btn a{
+    color: var(--secondaryText);
+}
+
+@media (min-width: 768px) {
+  .preview-btn {
+    padding: 13px 50px 13px;
+  }
+}
+
 .post-title{
-    color: black;
+    color: #121212;
     margin: 0;
 }
 
 .post-intro{
-    color: #192734;
+    color: #121212;
     font-size: 16px;
 }
 
@@ -565,25 +506,25 @@ h6{ font-size: 16px;}
     justify-content: center;
   }
   
-  .card {
+.card {
     position: relative;
     width: 300px;
     height: 200px;
     margin: 20px;
     overflow: hidden;
-  }
-  
-  .card img {
+}
+
+.card img {
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease;
-  }
-  
-  .card:hover img {
+}
+
+.card:hover img {
     transform: scale(1.2) blur(2px);
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -596,20 +537,45 @@ h6{ font-size: 16px;}
     align-items: center;
     opacity: 0;
     transition: opacity 0.5s ease;
-  }
-  
-  .card:hover .overlay {
+    text-align: center;
+}
+
+.card:hover .overlay {
     opacity: 1;
-  }
+    cursor: pointer;
+}
   
-  .overlay h2,
-  .overlay p {
+.overlay h2,
+.overlay a {
     margin: 0;
     padding: 20px;
     text-align: center;
-  }
+    font-size: 18px;
+}
 
-  /* END OTHER */
+.card:hover .overlay h2 {
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.overlay h2 {
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+    
+.overlay a {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+  /* END OTHER PROJECTS */
 
 #contact-form{
 	display: block;
