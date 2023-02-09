@@ -433,22 +433,28 @@ h6{ font-size: 16px;}
     margin: 20px 0 0 0;
     text-align: center;
   }
+
+  @media only screen and (max-width: 767px) {
+    .hobby-card {
+      width: calc(100% - 40px); 
+    }
+  }
 /* END HOBBIES TAB */
 
 .post-wrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 520px);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 520px));
     gap: 20px;
     justify-content: center;
     padding-bottom: 50px;
-}
+    }
 
 .thumbnail{
     display: block;
     width: 100%;
     height: 360px;
     object-fit: cover;
-}
+    }
 
 .post-preview{
     background-color: #fff;
