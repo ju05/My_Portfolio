@@ -500,11 +500,32 @@ height: 200px;
   color: var(--secondaryText);
 }
 
+
+
 @media (min-width: 768px) {
   .preview-btn {
     padding: 13px 50px 13px;
   }
 }
+
+@media only screen and (max-width: 767px) {
+    .post-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .post-title {
+      margin-bottom: 10px;
+    }
+    .post-intro {
+      margin-bottom: 20px;
+    }
+    .preview-btn {
+      margin-top: 10px;
+      width: 80%;
+    }
+  }
 
 .post-title {
   color: #121212;
