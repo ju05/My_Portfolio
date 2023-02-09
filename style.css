@@ -508,7 +508,7 @@ height: 200px;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 300px) {
     .post-preview {
     display: flex;
     flex-wrap: wrap;
