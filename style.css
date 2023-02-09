@@ -227,7 +227,7 @@ h6{ font-size: 16px;}
 }
 
 #blue-mode{
-	background-color: #121212;
+	background-color: #2e2e2e;
 }
 
 #harry-mode{
@@ -479,7 +479,7 @@ height: 200px;
 .post-preview {
   background-color: #fff;
   padding: 50px;
-  width: 100%;
+  width: auto;
 }
 
 .preview-btn {
