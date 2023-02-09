@@ -88,6 +88,17 @@ h6{ font-size: 16px;}
     margin: 0 auto;
 }
 
+#muggle-greeting {
+    text-align: center;
+    font-size: 1.2em; /* adjust font size to control text size on smaller screens */
+  }
+  
+  @media only screen and (max-width: 767px) { /* adjust breakpoint to target smaller screens */
+    #muggle-greeting {
+      font-size: 1.5em; /* adjust font size for smaller screens */
+    }
+  }
+
 .greeting-wrapper, .hello-hp{
     display: grid;
     text-align: center;
