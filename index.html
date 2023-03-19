@@ -28,13 +28,13 @@
                     </div>
 
                     <ul id="navigation">
-                        <li><a class="contact-short" href="#contact-form">contact</a></li>
+                        <li><a id = "contact" class="contact-short" href="#contact-form">contact</a></li>
                     </ul>
                 </div>
 
                 <div class="left-column">
                     <img id="profile-pic" src="images/profile-j.amaralwork@gmail.com.jpeg" alt="portrait with stars background - computer collage style">
-                    <h5 style="text-align: center;line-height:0;">Personalize Theme</h5>
+                    <h5 style="text-align: center;line-height:0;" id="personalize">Personalize Theme</h5>
 
                     <div class="theme-options-wrapper">
                         <div data-mode="light" id= "light-mode" class="theme-dot"></div>
@@ -50,8 +50,8 @@
 
                     <div id="preview-shadow">
                         <div id="preview">
-                            <h3>What I do </h3>
-                            <p>I'm a... <br> <span id="what-i-do" style="font-family: 'Orbitron', sans-serif; font-size: 2rem;">Full Stack Developer</span> </p>
+                            <h3 id="preview-title">What I do </h3>
+                            <p id ="preview-intro">I'm a... <br> <span id="what-i-do" style="font-family: 'Orbitron', sans-serif; font-size: 2rem;">Full Stack Developer</span> </p>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                         </div>
 
                         <div class="tab-content-item" id="tab-2-content">
-                            <h4>Technical Skills</h4>
+                            <h4 id="tab2-h4">Technical Skills</h4>
 
                             <div class="technical-skills-container">
                                 <ul class="skill-list">
@@ -143,17 +143,17 @@
                                   <img src="images/j.amaralwork@gmail.com_yoga.jpg" alt="Yoga">
                                   <div class="hobby-text">
                                     <h3>Yoga</h3>
-                                    <p>"It's not about being good at something. <br>
+                                    <p id="hobby1-quote">"It's not about being good at something. <br>
                                         Is about being good to yourself" <br>
                                         - Unknown - </p>
                                   </div>
                                 </div>
 
                                 <div class="hobby-card">
-                                    <img src="images/aquarela2.jpg" alt="Yoga">
+                                    <img src="images/aquarela2.jpg" alt="aquarela">
                                     <div class="hobby-text">
-                                      <h3>Reading</h3>
-                                      <p>"Our passion for learning is our tool for survival" <br>
+                                      <h3 id="hobby2-title">Reading</h3>
+                                      <p id="hobby2-quote">"Our passion for learning is our tool for survival" <br>
                                           - Carl Sagan -</p>
                                     </div>
                                   </div>
@@ -161,8 +161,8 @@
                                 <div class="hobby-card">
                                   <img src="images/Aquarela1.jpg" alt="watercolor">
                                   <div class="hobby-text">
-                                    <h3>Watercolor</h3>
-                                    <p>"Great things are done by a series of small things <br>
+                                    <h3 id="hobby3-title">Watercolor</h3>
+                                    <p id="hobby3-quote">"Great things are done by a series of small things <br>
                                         brought together." <br> - Van Gogh - </p>
                                   </div>
                                 </div>
@@ -179,19 +179,19 @@
 
     <section class="s3">
         <div class="main-container">
-            <h3 style="text-align: center;">My main projects</h3>
+            <h3 style="text-align: center;" id="main-projects-title">My main projects</h3>
             <div class="post-wrapper">
 
                 <div>
                     <div class="post">
                         <img class="thumbnail" src="images/recipapp.jpg" alt="">
                         <div class="post-preview">
-                            <h6 class="post-title">Recipes Searcher and Planner</h6>
-                            <p class="post-intro">A meal planner and searcher with special login for either regular users or chefs/restaurants. 
+                            <h6 class="post-title" id="main-project1-title">Recipes Searcher and Planner</h6>
+                            <p class="post-intro" id="mainproject1-description">A meal planner and searcher with special login for either regular users or chefs/restaurants. 
                             <br> Made using Google OAuth 2.0 authentication through Django allauth. 
-                            <br> The users can search for recipes and add them to their calendar using the Google Calendar API.</p></p>
-                            <button class="preview-btn"><a href="https://www.loom.com/share/52b945b979174f31b6d26287cd38da52" target="_blank" style="color:black">Demo</a></button>
-                            <button class="preview-btn"><a href="https://github.com/ju05/FinalProject" target="_blank" style="color:black">Code</a></button>
+                            <br> The users can search for recipes and add them to their calendar using the Google Calendar API.</p>
+                            <button class="preview-btn" id="demo-btn"><a href="https://www.loom.com/share/52b945b979174f31b6d26287cd38da52" target="_blank" style="color:black">Demo</a></button>
+                            <button class="preview-btn" id="code-btn"><a href="https://github.com/ju05/FinalProject" target="_blank" style="color:black">Code</a></button>
                         </div>
                     </div>
                 </div>
@@ -205,8 +205,8 @@
                             <br> The visitor interface allows login, contact with the hotel, checking availability, and making a booking. 
                             <br> The project was made using Django and PostgreSQL, allowing for staff management. 
                             <br> Staff can make reservations for users, delete and edit bookings, and also add new rooms.</p>
-                            <button class="preview-btn"><a href="https://www.loom.com/share/ff4642f015154c37b784da1511e2580f" target="_blank" style="color:black">Demo</a></button>
-                            <button class="preview-btn"><a href="https://github.com/ju05/Hotel_Torquay" target="_blank" style="color:black">Code</a></button>
+                            <button class="preview-btn" id="demo-btn"><a href="https://www.loom.com/share/ff4642f015154c37b784da1511e2580f" target="_blank" style="color:black">Demo</a></button>
+                            <button class="preview-btn" id="code-btn"><a href="https://github.com/ju05/Hotel_Torquay" target="_blank" style="color:black">Code</a></button>
                         </div>
                     </div>
                 </div> 
@@ -215,14 +215,14 @@
     </section>
 
     <section class="s4">
-        <h3 style="text-align: center;">Other Projects</h3>
+        <h3 style="text-align: center;" id="other-proj-title">Other Projects</h3>
         <div class="other-porjects-container">
             
             <div class="card">
               <img src="images/covid_analysis.jpg" alt="Image 1">
               <div class="overlay">
                 <a href="https://github.com/ju05/DI-Bootcamp/blob/main/Week7/Hackathon/covid-19_deaths_overview.ipynb" target="_blank">
-                <h2>Data: COVID-19 Analysis</h2></a>                                    
+                <h2 id="other-proj1">Data: COVID-19 Analysis</h2></a>                                    
               </div>
             </div>
 
@@ -230,7 +230,7 @@
               <img src="images/data-neighbors.png" alt="Image 2">
               <div class="overlay">
               <a href="https://github.com/ju05/DI-Bootcamp/blob/main/data_exercises/data_exercise1.ipynb" target="_blank">
-              <h2>Data: Real Estate <br> Preparation for Prediction</h2></a>
+              <h2 id="other-proj2">Data: Real Estate <br> Preparation for Prediction</h2></a>
               
               </div>
             </div>
@@ -239,7 +239,7 @@
                 <img src="images/hackathon project.jpg" alt="Image 2">
                 <div class="overlay">                
                 <a href="https://github.com/ju05/DI-Bootcamp/tree/main/Week3/Hackathon" target="_blank">
-                <h2>Hackathon Project: JavaScript</h2> </a>
+                <h2 id="other-proj3">Hackathon Project: JavaScript</h2> </a>
                 </div>
               </div>
 
@@ -250,19 +250,19 @@
 
     <section class="s5">
         <div class="main-container">
-            <h3 style="text-align: center;"> Contact-me</h3>
+            <h3 style="text-align: center;" id="contact-title"> Contact-me</h3>
 
             <form id="contact-form" onsubmit="sendEmail(); reset(); return false">
-                <label for="">Name:</label>
+                <label id="form-name">Name:</label>
                 <input class="input-field" id="name" type="text" name="name" required>
 
-                <label for="">Email:</label>
+                <label id="form-email">Email:</label>
                 <input class="input-field" id="email" type="text" name="email" required>
 
-                <label for="">Phone number:</label>
+                <label id="form-phone">Phone number:</label>
                 <input class="input-field" id="phone" type="text" name="phone">
 
-                <label for="">Message:</label>
+                <label id="form-message">Message:</label>
                 <textarea class="input-field" id="message" name="message" required></textarea>                
 
                 <input id="submit-btn" type="submit">
