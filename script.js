@@ -5,7 +5,7 @@ let currentLanguage = "english"
 
 function changeLanguage(lang) {
   // update the current language variable
-  currentLanguage = lang;
+  currentLanguage = "english";
 
   // fetch the JSON file with translations
   fetch('translations.json')
