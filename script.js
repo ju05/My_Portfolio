@@ -1,5 +1,42 @@
 console.log('linked')
 
+// Languages options
+let currentLanguage = "english"
+
+function changeLanguage(lang) {
+  // update the current language variable
+  currentLanguage = lang;
+
+  // fetch the JSON file with translations
+  fetch('translations.json')
+    .then(response => response.json())
+    .then(data => {
+      // update the text of the navigation link
+      document.getElementById('hello').innerText = data[currentLanguage]['hello'];
+
+      // update the intro text
+      document.getElementById('contact').innerText = data[currentLanguage]['contact'];
+    })
+    .catch(error => console.error('Error fetching translations:', error));
+}
+
+// add event listeners to the language buttons
+document.getElementById('english').addEventListener('click', function() {
+  changeLanguage('english');
+});
+
+document.getElementById('hebrew').addEventListener('click', function() {
+  changeLanguage('hebrew');
+});
+
+document.getElementById('spanish').addEventListener('click', function() {
+  changeLanguage('spanish');
+});
+
+document.getElementById('portuguese').addEventListener('click', function() {
+  changeLanguage('portuguese');
+});
+
 // Theme options
 let theme = localStorage.getItem('theme')
 if(theme == null){

@@ -179,6 +179,19 @@ h6{ font-size: 16px;}
 	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 
 }
+
+.languages-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    flex-wrap: wrap; /* add this property to allow the buttons to wrap on smaller screens */
+}
+  
+.languages-wrapper button {
+margin: 5px; /* add margin to create spacing between buttons */
+flex: 1; /* add flex property to allow buttons to grow and shrink as needed */
+max-width: 120px; /* add a maximum width to prevent buttons from becoming too wide on larger screens */
+}
 /* END OF NAVBAR */
 
 .left-column{

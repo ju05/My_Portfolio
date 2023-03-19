@@ -1,5 +1,5 @@
 {
-    "en":{
+    "english":{
         "hello": "Hello there, I'm Juliana Schmidt!",
         "contact": "contact",
         "personalize": "Personalize Theme",
@@ -34,7 +34,41 @@
         "form-message": "Message:",
         "submit-btn": "Submit" 
     },
-    "pt":{
+    "spanish":{
+        "hello": "¡Hola, soy Juliana Schmidt!",
+        "contact": "contacto",
+        "personalize": "Personalizar Tema",
+        "settings-note": "Las opciones de tema se guardarán para su próxima visita",
+        "preview-title": "¿Qué hago?",
+        "preview-intro": "Soy una...",
+        "what-i-do": "Desarrolladora Full Stack",
+        "textArray": ["Desarrolladora Full Stack", "Desarrolladora Python", "Apasionada por la Ciencia de Datos", "Compañera de trabajo entusiasmada", "Bruja de Gryffindor"],
+        "tab-1": "Sobre mí",
+        "tab-2": "Habilidades Técnicas",
+        "tab-3": "Hobbies y Hábitos",
+        "tab-1-title": "Sobre mí",
+        "tab-1-description": "¡Hola! Soy una desarrolladora Full Stack que conoce Python como la palma de mi mano, incluyendo sus principales frameworks y bibliotecas.<br><br> Tengo habilidades para enfrentar los últimos desafíos de desarrollo web, gracias al curso intensivo y práctico en Developers.Institute Tel Aviv, donde me gradué y un internship en una startup israeli. Estoy emocionada de poner todo mi conocimiento en práctica y marcar la diferencia en un entorno de trabajo dinámico y innovador.<br><br> ¡Pero espera, hay más!<br><br> No solo soy un mago de la tecnología, también soy una excelente compañera para tener cerca. Me encanta aprender sobre diferentes culturas, soy una excelente comunicadora y nunca digo no a una buena taza de café y una charla sobre Harry Potter, El Señor de los Anillos, Star Wars (y cómo es mejor que Star Trek) y las últimas tendencias tecnológicas.<br><br> Sí, soy una geek. ¡Así que hagamos que la magia suceda!",
+        "tab2-h4": "Habilidades técnicas",
+        "hobby1-quote": "\"No se trata de ser bueno en algo.<br> Se trata de ser bueno para uno mismo.\"<br> - Desconocido -",
+        "hobby2-title": "Lectura",
+        "hobby2-quote": "\"Nuestra pasión por aprender es nuestra herramienta de supervivencia.\"<br> - Carl Sagan -",
+        "hobby3-title": "Acuarela",
+        "hobby3-quote": "\"Las grandes cosas se logran a través de una serie de pequeñas cosas <br> reunidas.\"<br> - Van Gogh -",
+        "main-projects-title": "Mis proyectos principales",
+        "main-project1-title": "Buscador y planificador de recetas",
+        "mainproject1-description": "Un planificador y buscador de comidas con inicio de sesión especial para usuarios regulares o chefs / restaurantes. <br> Hecho usando la autenticación de Google OAuth 2.0 a través de Django allauth.<br> Los usuarios pueden buscar recetas y agregarlas al calendario usando la API de Google Calendar.",
+        "demo-btn": "Demostración",
+        "code-btn": "Código",
+        "other-proj-title": "Otros proyectos",
+        "other-proj1": "Análisis de datos: COVID-19",
+        "other-proj2": "Datos: Preparación de datos para predicción acerca de propiedades"
+    },
+    "hebrew": {
+        "hello":"היי, אני יוליאנה",
+        "contact":"ליצור קשר",
+        "personalize":"לשנות צבע"
+    }, 
+    "portuguese":{
         "hello": "Olá, eu sou a Juliana Schmidt!",
         "contact": "contato",
         "personalize": "Personalizar Tema",
@@ -68,35 +102,6 @@
         "form-phone": "Número de telefone:",
         "form-message": "Mensagem:",
         "submit-btn": "Enviar"
-        },
-    "es":{
-        "hello": "¡Hola, soy Juliana Schmidt!",
-        "contact": "contacto",
-        "personalize": "Personalizar Tema",
-        "settings-note": "Las opciones de tema se guardarán para su próxima visita",
-        "preview-title": "¿Qué hago?",
-        "preview-intro": "Soy una...",
-        "what-i-do": "Desarrolladora Full Stack",
-        "textArray": ["Desarrolladora Full Stack", "Desarrolladora Python", "Apasionada por la Ciencia de Datos", "Compañera de trabajo entusiasmada", "Bruja de Gryffindor"],
-        "tab-1": "Sobre mí",
-        "tab-2": "Habilidades Técnicas",
-        "tab-3": "Hobbies y Hábitos",
-        "tab-1-title": "Sobre mí",
-        "tab-1-description": "¡Hola! Soy una desarrolladora Full Stack que conoce Python como la palma de mi mano, incluyendo sus principales frameworks y bibliotecas.<br><br> Tengo habilidades para enfrentar los últimos desafíos de desarrollo web, gracias al curso intensivo y práctico en Developers.Institute Tel Aviv, donde me gradué y un internship en una startup israeli. Estoy emocionada de poner todo mi conocimiento en práctica y marcar la diferencia en un entorno de trabajo dinámico y innovador.<br><br> ¡Pero espera, hay más!<br><br> No solo soy un mago de la tecnología, también soy una excelente compañera para tener cerca. Me encanta aprender sobre diferentes culturas, soy una excelente comunicadora y nunca digo no a una buena taza de café y una charla sobre Harry Potter, El Señor de los Anillos, Star Wars (y cómo es mejor que Star Trek) y las últimas tendencias tecnológicas.<br><br> Sí, soy una geek. ¡Así que hagamos que la magia suceda!",
-        "tab2-h4": "Habilidades técnicas",
-        "hobby1-quote": "\"No se trata de ser bueno en algo.<br> Se trata de ser bueno para uno mismo.\"<br> - Desconocido -",
-        "hobby2-title": "Lectura",
-        "hobby2-quote": "\"Nuestra pasión por aprender es nuestra herramienta de supervivencia.\"<br> - Carl Sagan -",
-        "hobby3-title": "Acuarela",
-        "hobby3-quote": "\"Las grandes cosas se logran a través de una serie de pequeñas cosas <br> reunidas.\"<br> - Van Gogh -",
-        "main-projects-title": "Mis proyectos principales",
-        "main-project1-title": "Buscador y planificador de recetas",
-        "mainproject1-description": "Un planificador y buscador de comidas con inicio de sesión especial para usuarios regulares o chefs / restaurantes. <br> Hecho usando la autenticación de Google OAuth 2.0 a través de Django allauth.<br> Los usuarios pueden buscar recetas y agregarlas al calendario usando la API de Google Calendar.",
-        "demo-btn": "Demostración",
-        "code-btn": "Código",
-        "other-proj-title": "Otros proyectos",
-        "other-proj1": "Análisis de datos: COVID-19",
-        "other-proj2": "Datos: Preparación de datos para predicción acerca de propiedades"
-    }
+        }
 
 }
