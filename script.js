@@ -8,7 +8,7 @@ function changeLanguage(lang) {
   currentLanguage = "english";
 
   // fetch the JSON file with translations
-  fetch('translations.json')
+  fetch('languages.json')
     .then(response => response.json())
     .then(data => {
       // update the text of the navigation link
