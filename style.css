@@ -486,7 +486,7 @@ height: 200px;
 .thumbnail {
   width: 100%;
   height: 360px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .post-preview {
@@ -684,6 +684,15 @@ height: 200px;
 	background-color: var(--buttonColor);
 	border:none;
 }
+
+@media only screen and (min-width: 768px) {
+    /* Add gap between form fields on medium screens */
+    #contact-form label,
+    #contact-form input,
+    #contact-form textarea {
+    margin-bottom: 10px;
+    }
+    }
 
 footer{
     background-color: var(--mainColor);
