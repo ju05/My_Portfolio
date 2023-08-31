@@ -1,42 +1,4 @@
 console.log('linked')
-
-// Languages options
-let currentLanguage = "english"
-
-function changeLanguage(lang) {
-  // update the current language variable
-  currentLanguage = "english";
-
-  // fetch the JSON file with translations
-  fetch('languages.json')
-    .then(response => response.json())
-    .then(data => {
-      // update the text of the navigation link
-      document.getElementById('hello').innerText = data[currentLanguage]['hello'];
-
-      // update the intro text
-      document.getElementById('contact').innerText = data[currentLanguage]['contact'];
-    })
-    .catch(error => console.error('Error fetching translations:', error));
-}
-
-// add event listeners to the language buttons
-document.getElementById('english').addEventListener('click', function() {
-  changeLanguage('english');
-});
-
-document.getElementById('hebrew').addEventListener('click', function() {
-  changeLanguage('hebrew');
-});
-
-document.getElementById('spanish').addEventListener('click', function() {
-  changeLanguage('spanish');
-});
-
-document.getElementById('portuguese').addEventListener('click', function() {
-  changeLanguage('portuguese');
-});
-
 // Theme options
 let theme = localStorage.getItem('theme')
 if(theme == null){
@@ -56,27 +18,27 @@ for (var i=0; themeDots.length > i; i++){
 
 function setTheme(mode){
     if(mode == 'light'){
-        document.getElementById('theme-style').href = 'style.css',
+        document.getElementById('theme-style').href = 'asstes/css/style.css',
         document.getElementById('muggle-greeting').innerHTML = '<div id = "muggle-greeting" class="greeting-wrapper"><h1 id="hello">Hello there, <br>I am Juliana Schmidt!</h1></div>'
-        document.getElementById('profile-pic').src = 'images/j.amaralwork@gmail.com.jpg',
+        document.getElementById('profile-pic').src = 'assets/images/j.amaralwork@gmail.com.jpg',
         document.getElementById('linkedin-icon').style.color = '#FF605C',
         document.getElementById('github-icon').style.color = '#FFBD44',
         document.getElementById('email-icon').style.color = '#00CA4E'        
     }
 
     if(mode == 'blue'){
-        document.getElementById('theme-style').href = 'blue.css',
+        document.getElementById('theme-style').href = 'assets/css/blue.css',
         document.getElementById('muggle-greeting').innerHTML = '<div id = "muggle-greeting" class="greeting-wrapper"><h1 id="hello">Hello there, <br>I am Juliana Schmidt!</h1></div>'
-        document.getElementById('profile-pic').src = 'images/profile-j.amaralwork@gmail.com.jpeg',
+        document.getElementById('profile-pic').src = 'assets/images/profile-j.amaralwork@gmail.com.jpeg',
         document.getElementById('linkedin-icon').style.color = '#f3098e87',
         document.getElementById('github-icon').style.color = '#f3098e87',
         document.getElementById('email-icon').style.color = '#f3098e87'
     }
 
     if(mode == 'harry'){
-        document.getElementById('theme-style').href = 'harry.css',
+        document.getElementById('theme-style').href = 'assets/css/harry.css',
         document.getElementById('muggle-greeting').innerHTML = '<img src="images/hello-hp.png" style=" width: 100%; justify-content: center;" alt="hello there,  I am Juliana Schmidt in Harry Potters font">',
-        document.getElementById('profile-pic').src = "images/j.amaralwork@gmail_hp.jpg",
+        document.getElementById('profile-pic').src = "assets/images/j.amaralwork@gmail_hp.jpg",
         document.getElementById('linkedin-icon').style.color = '#d3a425b6',
         document.getElementById('github-icon').style.color = '#d3a425b6',
         document.getElementById('email-icon').style.color = '#d3a425b6'
