@@ -37,7 +37,7 @@ function setTheme(mode){
 
     if(mode == 'harry'){
         document.getElementById('theme-style').href = 'assets/css/harry.css',
-        document.getElementById('muggle-greeting').innerHTML = '<img src="images/hello-hp.png" style=" width: 100%; justify-content: center;" alt="hello there,  I am Juliana Schmidt in Harry Potters font">',
+        document.getElementById('muggle-greeting').innerHTML = '<img src="assets/images/hello-hp.png" style=" width: 100%; justify-content: center;" alt="hello there,  I am Juliana Schmidt in Harry Potters font">',
         document.getElementById('profile-pic').src = "assets/images/j.amaralwork@gmail_hp.jpg",
         document.getElementById('linkedin-icon').style.color = '#d3a425b6',
         document.getElementById('github-icon').style.color = '#d3a425b6',
